@@ -15,7 +15,7 @@ const woopa_obj = {
 2. como instanciar un objeto de una clase
 3. instanciar varios objetos de una misma clase
 4. como agregar el constructor para guardar atributos al crear un objeto
-5. crear métodos - funciones  delimitar comportamiento de la información
+5. crear métodos - funciones  delimitar comportamiento de la información - asignar funciones al objeto modelar el comportamiento
 */
 class Ajolonauta{
     constructor(name, mission, age,color){
@@ -30,6 +30,16 @@ class Ajolonauta{
         return `${this.name} is saying Hello!`
     }
 } //es el molde
+
+//diferencia 
+class Pokemon{
+    constructor(name){
+        this.name = name
+    }
+}
+
+const pikachu = new Pokemon("Pikachu")
+console.log(pikachu)
 
 //objeto de JS
 const woopa_obj_js = {}
