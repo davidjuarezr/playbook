@@ -20,6 +20,12 @@ app.get('/node', (req, res) => {
     res.send(explorer1)
 })
 
+//mandar un parametro por la URL
+app.get('/explorers/:explorer', (req, res) => {
+    console.log(req.params) //{ explorer: 'jorge' }
+    res.send(req.params)
+})
+
 app.listen(port, () => {
     console.log("Server Listo!")
 })
