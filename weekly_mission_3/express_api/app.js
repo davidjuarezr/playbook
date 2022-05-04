@@ -24,13 +24,28 @@ app.get('/v1/explorers/:id', (req, res) => {
     res.status(200).json(explorer1)
 })
 
-app.post('/v1/explorers/', (req, res) => {
+app.post('/v1/explorers', (req, res) => {
     console.log(`POST Explorers V1 API ${new Date()}`)
     // Agregar la lógica para persisitir
-    console.log(req.body) //parámetros del request 
-       
-    //HTTP CODE STATUS: 200
+    console.log(req.body) //parámetros del request        
+    //HTTP CODE STATUS: 201
     res.status(201).json({ message: "Creado exitosamente"})
+})
+
+app.put('/v1/explorers/:id', (req, res) => {
+    console.log(`PUT Explorers V1 API ${new Date()}`)
+    console.log(req.body) //parametros para actualizar
+    console.log(req.params.id) // query params
+    // Agregar la lógica para actualizar
+    //HTTP CODE STATUS: 200
+    res.status(200).json({ message: "Actualizado exitosamente"})
+})
+
+app.delete('/v1/explorers/:id', (req, res) => {
+    console.log(`DELETE Explorers V1 API ${new Date()}`)
+    // Agregar la lógica para eliminar el registro enviado
+    //HTTP CODE STATUS: 200
+    res.status(200).json({ message: "Se eliminó exitosamente"})
 })
 
 // Con esto iniciamos esta app
